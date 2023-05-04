@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: '69ffbc771614e178d3ae6b78e1f16594',
+        };
+    </script>
+    <script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.15&key=12c31408a5196ec9d16911086dea4449&plugin=AMap.ToolBar"></script>
+</head>
+
+<body>
+    <div id="main" style="height: 98vh; width: 99vw; margin-left: 0vw; margin-top: 0vh;"></div>
+    <script>
+        let rootPath = "http://darcy.ink";
+        let map = new AMap.Map('main', {
+            layers: [
+                new AMap.TileLayer.RoadNet(),
+                // new AMap.TileLayer.Satellite(),
+            ],
+            center: [103.992012, 30.552285],
+            zoom: 9,
+            mapStyle: 'amap://styles/grey',
+            viewMode: '3D',
+            pitch: 53 
+        });
+
+
+        // let dots = [
+        //     [103.992012, 30.552285],
+        //     [104.223849, 30.667788],
+        //     [104.188432, 30.323424],
+        // ]
+
+        // let icon = new AMap.Icon({
+        //     size: new AMap.Size(40, 50),
+        //     image: rootPath + "/static/icons/icon.png",
+        //     imageSize: new AMap.Size(40, 50)
+        // });
+
+        // let marker_0 = new AMap.Marker({ position: dots[0] });
+        // let marker_1 = new AMap.Marker({ position: dots[1], title: "图标是可以修改的", icon: icon });
+        // let marker_2 = new AMap.Marker({ position: dots[2] });
+
+        // map.add(marker_0);
+        // map.add(marker_1);
+        // map.add(marker_2);
+
+
+        // let infoWindow = new AMap.InfoWindow({
+        //     isCustom: true,
+        //     content: '<div style="background-color:#ffffff"; height: 200px; width: 300px><div>我是内容我是内容我是内容</div><a href="http://darcy.ink/static/lines.json">我是超链接我是超链接</a></div>',
+        //     offset: new AMap.Pixel(16, -45)
+        // });
+
+        // let onMarkerClick = function (e) {
+        //     infoWindow.open(map, e.target.getPosition());
+        // }
+        // marker_0.on('click', onMarkerClick);
+        // marker_1.on('click', onMarkerClick);
+        // marker_2.on('click', onMarkerClick);
+
+        // marker_1.setLabel({
+        //     offset: new AMap.Pixel(20, 20),  //设置文本标注偏移量
+        //     content: "<div class='info'>我是 这本书 的 label 标签</div>", //设置文本标注内容
+        //     direction: 'right' //设置文本标注方位
+        // });
+
+        // let polyline = new AMap.Polyline({
+        //     path: dots,
+        //     strokeColor: "#3366FF",
+        //     strokeWeight: 5,
+        //     strkoStyle: "solid",
+        // });
+        // map.add(polyline);
+        // let content = [
+        //     '<div class="context-menu-content" style="background-color:#ffffff;width:100px">',
+        //     '<ul class="context_menu">',
+        //     '<li onclick="menu.zoomMenu(0)">缩小</li>',
+        //     '<li class="split_line" onclick="menu.zoomMenu(1)">放大</li>',
+        //     '</ul',
+        //     '</div>'
+        // ];
+
+        // let contextMenu = new AMap.ContextMenu({
+        //     isCustom: true,
+        //     content: content.join('')
+        // });
+        // map.on('rightclick', function (e) {
+        //     contextMenu.open(map, e.lnglat);
+        // })
+
+        // // 同时引入工具条插件，比例尺插件和鹰眼插件
+        // AMap.plugin([
+        //     'AMap.ToolBar',
+        //     'AMap.Scale',
+        //     'AMap.OverView',
+        //     'AMap.MapType',
+        //     'AMap.Geolocation',
+        // ], function () {
+        //     // 在图面添加工具条控件，工具条控件集成了缩放、平移、定位等功能按钮在内的组合控件
+        //     map.addControl(new AMap.ToolBar());
+
+        //     // 在图面添加比例尺控件，展示地图在当前层级和纬度下的比例尺
+        //     map.addControl(new AMap.Scale());
+
+        //     // 在图面添加鹰眼控件，在地图右下角显示地图的缩略图
+        //     map.addControl(new AMap.OverView({ isOpen: true }));
+
+        //     // 在图面添加类别切换控件，实现默认图层与卫星图、实施交通图层之间切换的控制
+        //     map.addControl(new AMap.MapType());
+
+        //     // 在图面添加定位控件，用来获取和展示用户主机所在的经纬度位置
+        //     map.addControl(new AMap.Geolocation());
+        // });
+    </script>
+</body>
+
+</html>

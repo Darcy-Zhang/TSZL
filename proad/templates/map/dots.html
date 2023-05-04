@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="“巴蜀唐诗之路”以诗为脉，串联巴蜀山水文化资源。">
+    <title>巴蜀唐诗之路</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='icons/site_icon.jpg')}}">
+    </script>
+    <link rel="stylesheet" href="https://www.w3schools.cn/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/dots.css')}}">
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: '69ffbc771614e178d3ae6b78e1f16594',
+        };
+    </script>
+    <script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.15&key=12c31408a5196ec9d16911086dea4449"></script>
+</head>
+
+<body>
+    <div id="main"></div>
+    <script src="{{url_for('static', filename='scripts/dots.js')}}"></script>
+</body>
+
+</html>
